@@ -29,14 +29,14 @@ public class Main {
             loop.register(channel, new AbstractSessionFactory() {
                 @Override
                 protected IStreamHandler createHandler(SocketChannel channel) {
-                    ServerHandler haha = null;
+                    ServerHandler handler = null;
                     try {
-                        haha = new ServerHandler();
+                        handler = new ServerHandler();
                     }
                     catch (Exception e){
                         e.printStackTrace();
                     }
-                    return haha;
+                    return handler;
                 }
             }).sync();
 

@@ -19,7 +19,6 @@ public class ServerHandler extends AbstractStreamHandler {
 
     @Override
     public void read(Object msg) {
-        String jsonStringRequest = new String((byte[]) msg);
         answer(database.getCars());
     }
 
