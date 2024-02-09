@@ -31,12 +31,7 @@ public class ServerHandler extends AbstractStreamHandler {
                 System.out.println(getSession().getId() + "{created}" + getSession());
             }
             case OPENED -> {
-                try {
-                    System.out.println(getSession().getId() + "{connected}" + database.getCar0());
-                    database.getCars();
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
+                System.out.println(getSession().getId() + "{connected}");
             }
             case CLOSED -> {
                 System.out.println(getSession().getId() + "{disconnected}" + getSession());
